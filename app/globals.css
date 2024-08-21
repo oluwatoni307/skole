@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 215 20.2% 65.1%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: #1a1a1a;
+    --foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --popover: 0, 0%, 7.5%, 1;
+    --popover-foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --border: 217.2 12.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 85.7% 97.3%;
+
+    --ring: 217.2 32.6% 17.5%;
+  }
+}
+
+@font-face {
+  font-family: "inter";
+  src: url("../public/fonts/inter-subset.woff2") format("woff");
+}
+
+@layer base {
+  * {
+    font-family: inter;
+    font-family: system-ui;
+    @apply border-border;
+  }
+  p {
+    font-family: inter;
+    font-family: system-ui;
+  }
+  body {
+    background-color: #1a1a1a;
+  }
+  .paragraph {
+    text-indent: 25px;
+    --tw-text-opacity: 1;
+    color: hsl(0 0% 62.8% / var(--tw-text-opacity));
+  }
+}
+
+[data-animate] {
+  --stagger: 0;
+  --delay: 120ms;
+  --start: 0ms;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  [data-animate] {
+    animation: testEnter 0.6s both;
+    animation-delay: calc(var(--stagger) * var(--delay) + var(--start));
+  }
+}
+
+@keyframes testEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.stagger-1 {
+  --stagger: 1;
+}
+.stagger-2 {
+  --stagger: 2;
+}
+
+.stagger-3 {
+  --stagger: 3;
+}
+
+.stagger-4 {
+  --stagger: 4;
+}
+
+.stagger-5 {
+  --stagger: 5;
+}
+
+.stagger-6 {
+  --stagger: 6;
+}
+
+.stagger-7 {
+  --stagger: 7;
+}
+
+.stagger-8 {
+  --stagger: 8;
+}
+
+div {
+  color: white;
+}
+
+.rubric,
+th,
+td {
+  border: 1px solid white;
+}
+
+.rubric * {
+  font-size: 10px;
+}
